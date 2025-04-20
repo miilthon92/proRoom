@@ -1,7 +1,22 @@
-import { Link } from 'react-router-dom';
-import '../style.css'; // Importamos el CSS
+import { Link, useNavigate } from 'react-router-dom';
+import { isUserLoggedIn, logoutUser } from '../auth';
+import { useState, useEffect } from 'react';
+import '../style.css';
 
 function Header() {
+  const [isLogged, setIsLogged] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setIsLogged(isUserLoggedIn());
+  }, []);
+
+  const handleLogout = () => {
+    logoutUser();
+    setIsLogged(false);
+    navigate('/');
+  };
+
   return (
     <header>
       <div>
@@ -9,8 +24,17 @@ function Header() {
       </div>
       <nav>
         <Link to="/">Inicio</Link>
-        <Link to="/login">Ingresar</Link>
-        <Link to="/registro">Registro</Link>
+        {isLogged ? (
+          <>
+            <Link to="/perfil">Mi Perfil</Link>
+            <button onClick={handleLogout} className="logout-button">Cerrar Sesión</button>
+          </>
+        ) : (
+          <>
+            <Link to="/login">Ingresar</Link>
+            <Link to="/registro">Registro</Link>
+          </>
+        )}
       </nav>
     </header>
   );

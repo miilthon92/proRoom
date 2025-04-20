@@ -160,3 +160,17 @@ body {
     font-size: 16px;
   }
 }
+.logout-button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.logout-button:hover {
+  text-decoration: underline;
+}
