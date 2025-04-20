@@ -1,10 +1,15 @@
 function Registro() {
-    return (
-      <div style={{ padding: '20px' }}>
-        <h1>Página de Registro</h1>
-        <p>Crea una nueva cuenta en ProRoom.</p>
-      </div>
-    );
-  }
-  
-  export default Registro;
+  return (
+    <div className="main-content">
+      <h1>Crear una Cuenta</h1>
+      <form className="formulario">
+        <input type="text" placeholder="Nombre completo" required />
+        <input type="email" placeholder="Correo electrónico" required />
+        <input type="password" placeholder="Contraseña" required />
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
+  );
+}
+
+export default Registro;
