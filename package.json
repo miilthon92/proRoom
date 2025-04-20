@@ -1,7 +1,7 @@
 {
-    "name": "proRoom",
+    "name": "proroom",
     "version": "1.0.0",
-    "description": "Sitio web proRoom",
+    "private": true,
     "scripts": {
       "dev": "vite",
       "build": "vite build",
