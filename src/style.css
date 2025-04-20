@@ -88,3 +88,39 @@ body {
   .formulario button:hover {
     background-color: #333333;
   }
+  /* --------------------------- */
+/*        MODO RESPONSIVE      */
+/* --------------------------- */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .formulario input,
+  .formulario button {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .main-content {
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
