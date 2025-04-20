@@ -24,6 +24,7 @@ function Header() {
       </div>
       <nav>
         <Link to="/">Inicio</Link>
+        <Link to="/eventos">Eventos</Link> {/* Nuevo Link */}
         {isLogged ? (
           <>
             <Link to="/perfil">Mi Perfil</Link>
