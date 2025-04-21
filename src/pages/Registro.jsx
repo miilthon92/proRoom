@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebaseConfig';
+import { auth } from '../auth';
 import { useNavigate } from 'react-router-dom';
 
 const Registro = () => {
